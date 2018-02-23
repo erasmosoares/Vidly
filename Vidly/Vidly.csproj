@@ -207,11 +207,16 @@
     <Compile Include="Migrations\201802231433021_UpdateMembershipTypes.Designer.cs">
       <DependentUpon>201802231433021_UpdateMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802231858026_CreatingAnnotationsForMovie.cs" />
+    <Compile Include="Migrations\201802231858026_CreatingAnnotationsForMovie.Designer.cs">
+      <DependentUpon>201802231858026_CreatingAnnotationsForMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
@@ -323,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802231433021_UpdateMembershipTypes.resx">
       <DependentUpon>201802231433021_UpdateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802231858026_CreatingAnnotationsForMovie.resx">
+      <DependentUpon>201802231858026_CreatingAnnotationsForMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
