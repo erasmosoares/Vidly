@@ -199,6 +199,14 @@
     <Compile Include="Migrations\201802140239411_PopulateMoviesDatabase.Designer.cs">
       <DependentUpon>201802140239411_PopulateMoviesDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802231335417_PopulateCustomersDatabase.cs" />
+    <Compile Include="Migrations\201802231335417_PopulateCustomersDatabase.Designer.cs">
+      <DependentUpon>201802231335417_PopulateCustomersDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802231433021_UpdateMembershipTypes.cs" />
+    <Compile Include="Migrations\201802231433021_UpdateMembershipTypes.Designer.cs">
+      <DependentUpon>201802231433021_UpdateMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -305,6 +313,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802140239411_PopulateMoviesDatabase.resx">
       <DependentUpon>201802140239411_PopulateMoviesDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802231335417_PopulateCustomersDatabase.resx">
+      <DependentUpon>201802231335417_PopulateCustomersDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802231433021_UpdateMembershipTypes.resx">
+      <DependentUpon>201802231433021_UpdateMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
