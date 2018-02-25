@@ -7,9 +7,9 @@ namespace Vidly.Migrations
     {
         public override void Up()
         {
-            Sql("SET IDENTITY_INSERT Customers ON");
-            Sql("INSERT INTO Customers (Id, Name, IsSubscribedToNewsletter,MembershipTypeId,Birthdate) VALUES (1, 'Erasmo Soares','true','1',08/12/1986)");
-            Sql("SET IDENTITY_INSERT Customers OFF");
+           // Sql("SET IDENTITY_INSERT Customers ON");
+           // Sql("INSERT INTO Customers (Id, Name, IsSubscribedToNewsletter,MembershipTypeId,Birthdate) VALUES (1, 'Erasmo Soares','true','1',08/12/1986)");
+           // Sql("SET IDENTITY_INSERT Customers OFF");
         }
         
         public override void Down()
