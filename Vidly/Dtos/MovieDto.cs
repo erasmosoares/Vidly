@@ -13,18 +13,15 @@ namespace Vidly.Dtos
         public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Genre")]
         public byte GenreId { get; set; }
 
-        [Required(ErrorMessage = "The Release Date field is required.")]
+        public GenreDto Genre { get; set; }
+
         public DateTime DateAdded { get; set; }
 
-        [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
 
-        //[MinNumberOfMoviesInStock]
         [Required]
-        [Display(Name = "Number in Stock")]
         public byte NumberInStock { get; set; }
     }
 }
