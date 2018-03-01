@@ -1,10 +1,12 @@
 namespace Vidly.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity.Migrations;
     
     public partial class SeedUsers1 : DbMigration
     {
+       
         public override void Up()
         {
             Sql(@"
