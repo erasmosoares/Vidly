@@ -5,6 +5,7 @@ using Vidly.Models;
 using System.Data.Entity;
 using Vidly.ViewModels;
 using System;
+using Authentication.Models;
 
 namespace Vidly.Controllers
 {

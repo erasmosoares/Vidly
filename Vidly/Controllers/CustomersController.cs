@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using System.Collections.Generic;
 using Vidly.ViewModels;
+using Authentication.Models;
 
 namespace Vidly.Controllers
 {
