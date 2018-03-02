@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Collections.Generic;
 using Vidly.ViewModels;
 using Authentication.Models;
+using System.Runtime.Caching; 
 
 namespace Vidly.Controllers
 {
@@ -23,6 +24,12 @@ namespace Vidly.Controllers
         }
         public ViewResult Index()
         {
+            // Data Caching
+            //if(MemoryCache.Default["Genres"] == null)
+            //   MemoryCache.Default["Genres"] = _context.Genres.ToList();
+
+            //var genres = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
+
             if (User.IsInRole(RoleName.CanManageCustomers))
                 return View("List");
 
