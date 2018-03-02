@@ -21,11 +21,15 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageCustomers))
+                return View("List");
+
+            return View("ReadOnlyList");
         }
 
+        [Authorize(Roles = RoleName.CanManageCustomers)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -38,6 +42,7 @@ namespace Vidly.Controllers
             return View("CustomerForm",viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageCustomers)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
