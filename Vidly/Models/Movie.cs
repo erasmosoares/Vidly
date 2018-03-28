@@ -31,5 +31,7 @@ namespace Vidly.Models
         [MinNumberOfMoviesInStock]
         public byte NumberInStock { get; set; }
 
+        public byte NumberAvailable { get; set; }
+
     }
 }
