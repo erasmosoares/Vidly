@@ -8,6 +8,7 @@ using System.Web.Http;
 using Vidly.Dtos;
 using Vidly.Models;
 
+
 namespace Vidly.Controllers.Api
 {
     public class NewRentalsController : ApiController

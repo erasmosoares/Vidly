@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Collections.Generic;
 using Vidly.ViewModels;
 using Authentication.Models;
+using System.Runtime.Caching; 
 
 namespace Vidly.Controllers
 {
@@ -21,11 +22,21 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            // Data Caching
+            //if(MemoryCache.Default["Genres"] == null)
+            //   MemoryCache.Default["Genres"] = _context.Genres.ToList();
+
+            //var genres = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
+
+            if (User.IsInRole(RoleName.CanManageCustomers))
+                return View("List");
+
+            return View("ReadOnlyList");
         }
 
+        [Authorize(Roles = RoleName.CanManageCustomers)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -38,6 +49,7 @@ namespace Vidly.Controllers
             return View("CustomerForm",viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageCustomers)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
